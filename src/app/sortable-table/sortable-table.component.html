@@ -2,14 +2,12 @@
     <table class="table table-bordered">
         <thead>
           <tr>
-            <!-- <th></th> -->
-            <th (click)="alphabitical('title')">Task</th>
-            <th (click)="alphabitical('completed')">Status</th>
+            <th (click)="sort('title')">Task</th>
+            <th (click)="sort('completed')">Status</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let todo of todos" [ngClass]="{'completed': todo.completed}">
-            <!-- <td>{{ todos.indexOf(todo) + 1 }}</td> -->
             <td>{{ todo.title }}</td>
             <td><img [src]="'/img/' + todo.completed + '.png'" alt=""></td>
           </tr>

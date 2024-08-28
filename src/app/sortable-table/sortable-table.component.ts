@@ -20,13 +20,15 @@ export class SortableTableComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    // GET TO DOs
     this.generalService.getTodos().subscribe(res => {
       this.todos = res;
       console.log(this.todos)
     });
   }
   
-  alphabitical(tab: "title" | "completed") {
+  // SORT TO DOs BY TITLE OR BY COMPLETION STATUS
+  sort(tab: "title" | "completed") {
     this.order = !this.order
     this.todos.sort((a, b) => {
       if(a[tab] < b[tab]) { return this.order ? -1 : 1 }

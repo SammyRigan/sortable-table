@@ -10,8 +10,6 @@ const API_URL = 'https://jsonplaceholder.typicode.com//users/1/todos';
 })
 export class GeneralService {
 
-  // private apiUrl = 'https://jsonplaceholder.typicode.com/todos';
-
   constructor(private http: HttpClient) {}
 
   getTodos(): Observable<ToDo[]> {
