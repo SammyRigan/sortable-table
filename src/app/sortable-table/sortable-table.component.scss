@@ -1,0 +1,44 @@
+.table-wrap {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    text-align: left;
+    font-size: 20px;
+    padding: 10px;
+
+    &:last-child {
+        text-align: center;
+    }
+}
+
+td {
+    text-transform: capitalize;
+    padding: 10px;
+    border-bottom: solid 1px #00000010;
+
+    &:last-child {
+        text-align: center;
+    }
+}
+
+tr {
+    cursor: pointer;
+
+    &.completed {
+        font-weight: 600;
+        text-decoration: line-through;
+        color: #20ac3a;
+    }
+    &:hover {
+        background-color: #00000010;
+    }
+}
+
+img {
+    width: 20px;
+}
